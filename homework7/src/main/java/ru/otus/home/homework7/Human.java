@@ -1,6 +1,5 @@
 package ru.otus.home.homework7;
 
-import com.sun.jdi.connect.Transport;
 import ru.otus.home.homework7.land.Land;
 
 public class Human {
@@ -16,6 +15,10 @@ public class Human {
 
     public void setCurrentLand(Land currentLand) {
         this.currentLand = currentLand;
+    }
+
+    public Land getCurrentLand() {
+        return currentLand;
     }
 
     public int getAmountOfAvailableEnergy() {

@@ -3,6 +3,7 @@ package ru.otus.home.homework7.transport;
 import org.apache.commons.lang3.ArrayUtils;
 import ru.otus.home.homework7.Human;
 import ru.otus.home.homework7.land.Land;
+
 import static ru.otus.home.homework7.land.Land.SWAMP;
 
 public class Horse extends Transport {
