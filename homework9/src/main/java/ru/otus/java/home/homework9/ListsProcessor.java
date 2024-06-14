@@ -14,6 +14,7 @@ public class ListsProcessor {
         return nums;
     }
 
+
     public static int sumElemsGreaterThan5(ArrayList<Integer> arrList) {
         int sum = 0;
         for (Integer i : arrList) {
@@ -23,6 +24,7 @@ public class ListsProcessor {
         return sum;
     }
 
+
     public static ArrayList<Integer> replaceValuesOfList(int num, ArrayList<Integer> arrList) {
         ListIterator<Integer> iterator = arrList.listIterator();
         while(iterator.hasNext()) {
@@ -31,6 +33,7 @@ public class ListsProcessor {
         }
         return arrList;
     }
+
 
     public static ArrayList<Integer> increaseValues(int num, ArrayList<Integer> arrList) {
         ListIterator<Integer> iterator = arrList.listIterator();

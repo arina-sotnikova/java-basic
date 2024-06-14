@@ -16,6 +16,7 @@ public class EmployeeOperations {
         return employeesNames;
     }
 
+
     public static List<Employee> getEmployeesOfSpecificAge(int age, List<Employee> employees) {
         List<Employee> employeesOFSpecificAge = new ArrayList<>();
         for (Employee e: employees) {
@@ -26,6 +27,7 @@ public class EmployeeOperations {
         return employeesOFSpecificAge;
     }
 
+
     public static boolean checkAverageAge(int minAverageAge, List<Employee> employees) {
         int sum = 0;
         int averageAge = 0;
@@ -35,6 +37,7 @@ public class EmployeeOperations {
         averageAge = sum / employees.size();
         return averageAge > minAverageAge;
     }
+
 
     public static Employee getYoungestEmployee(List<Employee> employees) {
         return Collections.min(employees, Comparator.comparing(Employee::getAge));
