@@ -6,8 +6,7 @@ import java.util.ListIterator;
 
 public class ListsProcessor {
     public static List<Integer> makeArrayListFromMinAndMaxValues(int min, int max) {
-        int initialArrayListCapacity = (max - min) + 1;
-        List<Integer> nums = new ArrayList<>(initialArrayListCapacity);
+        List<Integer> nums = new ArrayList<>((max - min) + 1);
         for (int i = min; i <= max; i++) {
             nums.add(i);
         }
@@ -19,7 +18,6 @@ public class ListsProcessor {
         int sum = 0;
         for (Integer i : arrList) {
             if (i > 5) sum += i;
-            sum += 0;
         }
         return sum;
     }

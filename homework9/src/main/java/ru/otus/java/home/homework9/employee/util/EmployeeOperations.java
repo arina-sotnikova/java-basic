@@ -17,10 +17,10 @@ public class EmployeeOperations {
     }
 
 
-    public static List<Employee> getEmployeesOfSpecificAge(int age, List<Employee> employees) {
+    public static List<Employee> getEmployeesOfSpecificAge(int minAge, List<Employee> employees) {
         List<Employee> employeesOFSpecificAge = new ArrayList<>();
         for (Employee e: employees) {
-            if (e.getAge() >= age) {
+            if (e.getAge() >= minAge) {
                 employeesOFSpecificAge.add(e);
             }
         }
