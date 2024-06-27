@@ -1,20 +1,19 @@
 package ru.otus.java.home.homework10;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class PhoneBook {
-    private HashMap<Person, Set<String>> records;
+    private Map<Person, Set<String>> records;
 
-    public PhoneBook(HashMap<Person, Set<String>> records) {
+    public PhoneBook(Map<Person, Set<String>> records) {
         this.records = records;
     }
 
     public Set<String> getNumbers(Person person) {
-        return records.get(person);
+        return records.getOrDefault(person, new HashSet<>());
     }
 
     public void add(Person person, String number) {
