@@ -2,16 +2,24 @@ package ru.otus.java.home.homework12.filesprocessing;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FilesProcessor {
-    public static void getFiles(File dir) {
-        File[] filesList = dir.listFiles();
-        if (filesList == null) throw new AssertionError();
-        for (File file : filesList) {
-            if (file.isFile()) {
-                System.out.println(file.getName());
-            }
+    public static void getFiles(Path directoryPath) {
+        try (Stream<Path> stream = Files.list(directoryPath)) {
+            Set<String> files = stream
+                    .filter(file -> !Files.isDirectory(file))
+                    .map(Path::getFileName)
+                    .map(Path::toString)
+                    .collect(Collectors.toSet());
+            System.out.println(files);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
