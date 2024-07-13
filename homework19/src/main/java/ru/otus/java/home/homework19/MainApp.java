@@ -32,7 +32,7 @@ public class MainApp {
         FruitBox fruitBox = new FruitBox();
         AppleBox appleBox = new AppleBox();
         fruitBox.put(apple1);
-        fruitBox.extractApple();
+        fruitBox.extract();
         System.out.println(fruitBox.compare(appleBox));
         appleBox.put(apple1);
         System.out.println(appleBox.compare(fruitBox));
