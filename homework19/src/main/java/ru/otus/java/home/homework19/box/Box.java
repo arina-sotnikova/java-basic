@@ -25,6 +25,12 @@ abstract class Box<T extends Comparable<?>> {
         return contents.remove(0);
     }
 
+    public final void putIn(Box<? super T> anotherBox) {
+        for (int i = 0; i < contents.size(); i++) {
+            anotherBox.put(extract());
+        }
+    }
+
     public final <S extends Comparable<?>> boolean compare(Box<S> that) {
         return this.getContents().size() == that.getContents().size();
     }

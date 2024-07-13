@@ -23,18 +23,17 @@ public class MainApp {
 
         System.out.println(orangeBox1.compare(orangeBox2));
 
-        Orange extracted = orangeBox2.extract();
-        orangeBox1.put(extracted);
+        orangeBox1.putIn(orangeBox2);
 
-        orangeBox2.put(orange4);
         System.out.println(orangeBox1.compare(orangeBox2));
 
         FruitBox fruitBox = new FruitBox();
         AppleBox appleBox = new AppleBox();
         fruitBox.put(apple1);
-        fruitBox.extract();
+        appleBox.putIn(fruitBox);
         System.out.println(fruitBox.compare(appleBox));
         appleBox.put(apple1);
         System.out.println(appleBox.compare(fruitBox));
+
     }
 }
